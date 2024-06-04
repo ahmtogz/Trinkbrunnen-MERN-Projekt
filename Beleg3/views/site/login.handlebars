@@ -1,0 +1,26 @@
+<div class="all-elements">
+    <div id="loginID" class="login-container">
+
+        {{#if sessionFlash.message}}
+            <div class="{{sessionFlash.type}}">
+                {{sessionFlash.message}}
+            </div>
+        {{/if}}
+
+
+        <h1>Login-Screen</h1><br><br>
+        <div class="logo">
+            <img src="Brunnen.jpeg" alt="trinkbrunnen" style="width:200px">
+        </div>
+        <div class="login-form-container">
+            <form action="/home" method="post" class="inline-form">
+                <div id="txt-container" class="txt-field-container">
+                    <input  name="username" type="text" placeholder="username" class="input">
+                    <input  name="password" type="password" placeholder="password" class="input"><br><br><br>
+                </div>
+
+                <button type="submit" class="action-button">Login</button>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,92 @@
+                                                            Beleg 3
+                                                    Webapp mit Backend und DB
+
+User Story: Als Product Owner würde ich gern eine letzte Version der „Sustainability Locations“-Webapp dem
+Management vorstellen. Diese Version soll die Standortdaten aus einer Datenbank beziehen, neue Standorte in dieser
+Datenbank speichern und Standorte in der DB updaten und löschen. In Ihre Webapp kann ich mich als Admin-User,
+„admina“, oder als Gastnutzer:in „guest“, einloggen. Für admina und guest gelten die Rollenrechte aus Beleg 2.
+
+Voraussetzung: Die Anforderungen aus Beleg 2 sind umgesetzt. Sollte das nicht der Fall sein, dann muss das erst noch
+erfolgen. Soll heißen: welche Screens wann und wie angezeigt werden sollen, wird hier nicht noch einmal beschrieben.
+
+Ihre Webapp mit Backend muss so funktionieren wie der Prototyp in Beleg 2, bloß dass der Code, der die Klicks auf
+entsprechende Buttons handhabt, jetzt mit Ihrem Backend kommunizieren soll.
+
+Node.js-Backend erstellen
+• Wenn die PO-Person die URL, http://localhost:PORT/, im Browser öffnet, wird der Login-Screen im Browser
+angezeigt.
+
+• Die zwei User, „admina“ und „guest“, aus Beleg 2 mit ihren Attributen: username, password, isAdmin, name,
+etc. müssen übernommen werden (anfangs, bis DB verfügbar ist, können admina und guest im JS-Code
+hartkodiert sein).
+
+• Die vier Standorte, die für Beleg 2 angelegt wurden, müssen übernommen werden (anfangs, bis DB verfügbar
+ist, können diese im JS-Code hartkodiert sein).
+
+• Ihr Node.js-Backend stellt zwei Endpoints zur Verfügung:
+
+        o /users: der Endpoint für den Login - akzeptiert und validiert die userID/password-Kombination. Bei
+          ungültiger userID/password-Kombo, wird der HTTP-Statuscode 401 („Unauthorized“) zurückgeschickt.
+          Bei gültiger userID/password-Kombination, wird der HTTP-Statuscode 200 und entsprechendes User-POJO als JSON
+          in der Payload zurückgeschickt.
+
+        o /susLocs: der REST-Endpoint fürs CRUD von Standorten - Dieser Endpoint handhabt alle 4 HTTPMethoden:
+
+
+
+o Beispiele:
+§ POST http://localhost:PORT/susLocs mit Payload
+
+{
+"name":"Garfields Schlemmerstube",
+"description":"Bio Katzennahrung",
+"street":"Finowstr 10",
+…
+“zip”: 10437
+"lat":"52.5",
+"lng":"13.4"
+}
+
+Server legt diesen neuen Standort an und schickt die neue ID an den Client im HTTP-Header „Location“ zurück
+Beispiel: Id des neu angelegten STandortes ist 7. Dann ist die Antwort Ihres Servers
+HTTP-Status=201
+Location: /susLocs/7
+ohne Payload
+
+§ GET http://localhost:PORT/susLocs: schickt alle Standorte zurück
+§ GET http://localhost:PORT/susLocs/7: schickt den Standort mit der ID 7 zurück
+§ PUT http://localhost:PORT/susLocs/7 mit Payload:
+
+{
+"id": 7,
+"firstname":" Garfields Schlemmerstube",
+"lastname":" Bio Katzennahrung",
+"street":"Neue Straße 22",
+…
+"lat":"52.5",
+"lng":"13.2"
+}
+
+Server führt das Update des Standortes durch und schickt, falls erfolgreich, nur den
+Statuscode 204 zurück.
+
+§ DELETE http://localhost:PORT/susLocs/7 ohne Payload: Server löscht den Standort mit Id 7
+und schickt, falls erfolgreich, nur den Statuscode 204 zurück
+
+
+Einbinden der Datenbank
+
+• MongoDB muss genutzt werden. Es wird eine Datenbank mit zwei Collections angelegt:
+            o eine für „User“ mit folgenden Feldern: userid, password, firstname, lastname, isAdmin (true für
+              „admin“ oder false für „non-admin“).
+            o eine für „Standorte“ mit Felder, die Ihre Standortkategorie benötigt, mindestens: Name, Straße +
+              Hausnummer, PLZ, Stadt, …, lat, lng
+
+• Die zwei User aus Beleg 2 müssen jetzt in die entsprechende DB-Collection übernommen werden und dürfen
+nicht mehr im JavaScript hart kodiert sein.
+
+• Die vier Standorte aus Beleg 2 müssen jetzt in die entsprechende DB-Collection übernommen werden und
+dürfen nicht mehr im JavaScript hart kodiert sein.
+
+• Ihr Node.js-Backend ist mit der Datenbank verbunden und nutzt diese für die Validierung der Logins und die
+CRUD-Operationen für Standorte.

@@ -1,0 +1,22 @@
+{
+  "name": "beleg3",
+  "version": "1.0.0",
+  "description": "Node Application",
+  "main": "nodeApp.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ahmet Oguz",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "bootstrap": "^5.3.3",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "express-handlebars": "^7.1.2",
+    "express-session": "^1.18.0",
+    "mdb-react-ui-kit": "^8.0.0",
+    "method-override": "^3.0.0",
+    "mongoose": "^8.4.0"
+  }
+}

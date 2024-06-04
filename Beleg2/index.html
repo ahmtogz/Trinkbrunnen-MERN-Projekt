@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <meta charset="UTF-8">
+    <title> Location of Water dispenser</title>
+
+</head>
+<body>
+<header class="head">
+    <h1>Trinkbrunnen</h1>
+</header>
+
+<div class="all-elements">
+    <div id="loginID" class="login-container">
+        <h1>Login-Screen</h1>
+        <div class="logo">
+            <img src="/Beleg1/Brunnen.jpeg" alt="trinkbrunnen" style="width:250px"><br><br>
+        </div>
+        <div class="login-form-container">
+            <form method="post">
+                <div id="txt-container" class="txt-field-container">
+                    <input id="usernameId" type="text" placeholder="username" class="input"><br>
+                    <input id="passwordId" type="password" placeholder="password" class="input"><br><br>
+                </div>
+                <div id="login-buttonId" class="login-button-container"><a class="login" href="#">Login</a></div>
+            </form>
+        </div>
+        <div class="login-footer">
+            <p>© 2022 Trinkbrunnen Networks. All rights reserved.</p>
+            <p>Terms of Service | Privacy Policy</p>
+        </div>
+    </div>
+
+
+    <div id="mainID" class="main-container">
+        <div class="main-top">
+            <a id="AddNewStationID" href="#">Add new station</a>
+            <a id="logoutID" href="#">Logout</a>
+        </div>
+        <div class="main-mitte">
+            <div id="contactsID" class="main-list">
+
+                <a href="#">Tempelhof</a>
+                <a href="#">Mitte</a>
+                <a href="#">Neuköln</a>
+                <a href="#">Treptow</a>
+                <a href="#">Wedding</a>
+            </div>
+            <div id="map" class="map-height"></div>
+        </div>
+        <div class="main-footer"><p>Ahmet Oguz.</p></div>
+    </div>
+
+
+    <div id="addID" class="add-container" >
+        <h1>Add-Screen</h1>
+        <div class="add-form-container">
+            <form method="post">
+                <div class="txt-field-container">
+                    <input id="name-add" type="text" placeholder="Name" class="input">   <br><br>
+                    <input id="address-add"type="text" placeholder="Strasse" class="input"><br><br>
+                    <input id="postCode-add" type="text" placeholder="PLZ" class="input"><br><br>
+                    <input id="city-add"type="text" placeholder="Stadt" class="input"><br><br>
+                </div>
+            </form>
+        </div><br><br><br><br>
+        <div class="button-container">
+            <div id="btnAdd" class="add-container-button"><a href="#">Save</a></div>
+            <div id="btnAddCancel" class="add-container-button"><a href="#">Cancel</a></div>
+        </div>
+    </div>
+
+
+
+    <div id="updateDeleteID" class="updateDelete-container">
+        <h1>Update/Delete-Screen</h1>
+
+        <div class="updateDelete-form-container">
+            <form method="get">
+                <div class="txt-field-container">
+                    <label>Name</label>
+                    <input type="text" name="name" id="updateDeleteName" value="Wasserspender Britzer-Garten"><br><br>
+
+                    <label>Straße</label>
+                    <input type="text" name="address" id="updateDeleteAddress" value="Sangerhauser Weg 8"><br><br>
+
+                    <label> Plz</label><br>
+                    <input type="number" name="postCode" id="updateDeletePostCode" value="12349"><br><br>
+
+                    <label>Stadt</label>
+                    <input type="text" name="city" id="updateDeleteCity" value="Berlin"><br><br>
+
+
+
+                </div>
+            </form>
+        </div> <br><br><br><br>
+
+        <div class="button-container">
+            <div class="updateDelete-container-button" value="Delete" id="btnDelete" ><a href="#">Delete</a></div>
+            <div class="updateDelete-container-button" value="Update" id="btnUpdate" ><a href="#">Update</a></div>
+            <div class="updateDelete-container-button" value="Cancel" id="btnCancel" ><a href="#">Cancel</a></div>
+        </div>
+
+    </div>
+</div>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>

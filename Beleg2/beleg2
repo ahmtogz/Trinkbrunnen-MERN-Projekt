@@ -1,0 +1,76 @@
+                                                    Beleg 2
+                                            Frontend mit JavaScript
+
+User Story: Als PO-Person des Projektes zur Visualisierung von nachhaltigen, umwelt-bezogenen Standorten in Berlin
+und Umgebung möchte ich eine zweite Version Ihres Frontend-Prototyps unserem Management vorstellen. Die
+Webanwendung soll nun eine richtige SPA (Single Page Application) werden, allerdings noch ohne Backend & DB.
+
+Acceptance Criteria:
+
+1. Die Anforderungen an die vier Screens aus Beleg 1 bleiben bestehen: alle in einer .html-Datei, etc. Eine
+   Anforderung kommt hinzu: Wir brauchen auf den Screens einen Footer, welcher notwendige Informationen
+   enthalten soll. Welche Infos das genau sind, ist Ihre Aufgabe in diesem Beleg.
+
+2. Wenn die PO-Person den File-URI …/index.html im Browser öffnet, soll nur der Login-Screen mit neuem
+   Footer im Browser angezeigt werden.
+
+3. In Ihre Webapplikation müssen sich diese zwei User-Personen einloggen können:
+
+   o Username: admina, Password: password
+   o Username: guest, Password: password
+
+   „admina“ ist die Admin-Person der Webanwendung. Sie darf neue Standorte anlegen, existierende Standorte
+   löschen und bearbeiten. „guest“ darf sich alle Standorte angucken, darf diese aber weder bearbeiten noch
+   löschen. „guest“ darf keine Standorte anlegen.
+
+4. Ihre Webanwendung muss vier real-existierende, nachhaltige Standorte Ihrer Kategorie anzeigen: 1) als
+   Markierungen auf der Karte und 2) in der Liste links neben der Karte.
+
+5. Wenn sich die User-Person als „admina“ einloggt:
+   • Korrekte Login-Kombo (admina/password) wurde eingegeben
+   • Das Klicken des Login-Buttons zeigt den Main-Screen an:
+
+   Der Main-Screen besteht aus der Karte mit den 4 Markierungen, einer Standortliste links neben der Karte,
+   einer persönlichen Begrüßungsnachricht, einem „Add“-Button, einem „Logout“-Button und dem neuem
+   Footer.
+
+   • Das Klicken auf den „Add“-Button öffnet den „Add New Location“-Screen
+   • Das Klicken auf einen Standort in der Standortliste öffnet den „Detail“-Screen für diesen Standort mit
+   „Update/Delete/Cancel“-Buttons und zeigt standort-spezifische Details an.
+   • Das Klicken auf den Logout-Button, loggt den User aus und zeigt wieder den Login-Screen an
+
+6. Wenn sich die User-Person als „guest“ einloggt:
+
+   • Korrekte Login-Kombo (guest/password) wurde eingegeben
+   • Das Klicken des Login-Buttons zeigt den Main-Screen an:
+
+   Der Main-Screen besteht aus der Karte mit den 4 Markierungen, einer Standortliste links neben Karte,
+   einer persönlichen Begrüßungsnachricht, einem „Logout“-Button und dem neuen Footer. Der „Add“-
+   Button wird nicht angezeigt.
+
+   • Das Klicken auf einen Standort in der Standortliste öffnet den „Detail“-Screen für diesen Standort, zeigt
+   standort-spezifische Details an, aber ohne „Update“ & „Delete“-Buttons
+   • Das Klicken auf den Logout-Button, loggt den User aus und zeigt wieder den Login-Screen an
+
+7. Versucht sich jemand mit einer inkorrekten username/passwort-Kombo einzuloggen, muss diese User-Person
+   abgewiesen werden (z.B.: alert-Box). Der Login-Screen darf nicht verschwinden.
+
+8. Als ‚admina‘ einen neuen Standort anlegen: Klicken des „Add“-Buttons -> „Add New Location“-Screen
+   erscheint -> User befüllt die Inputfelder des Formulars -> Klicken des „Save/Add“-Buttons ->
+
+        1) Anlegen von neuem Standort erfolgreich: der Main-Screen wird angezeigt. Der neue Standort
+        befindet sich links in der Standortliste und dessen Geokoordinate oder Markierung wird auf der Karte
+        angezeigt.
+
+        2) Anlegen von neuem Standort nicht erfolgreich: eine Infomessage wird angezeigt, der „Add“-Screen
+        verschwindet nicht.
+
+   Wir werden in der nächsten Übung bzw. Vorlesung besprechen, welche Services wir zum Ermitteln der GeoKoordinaten der eingegebenen Adresse nutzen können. (Bitte beachten Sie, dass Ihre Nutzer:innen auchAdressen eingeben können, die nicht existieren, d.h., nicht in Geokoordinaten umgewandelt werden können!?)
+
+9. Die „Update“ und „Delete“-Buttons müssen funktionieren. D.h., ändert der ‚admina‘-Nutzer Eigenschaften des
+   Standortes, dann müssen diese Änderungen gespeichert werden und beim nächsten Login angezeigt werden.
+   Ebenso das Löschen von Standorten, löscht diese permanent.
+
+10.Der Logout-Button loggt admina oder normalo aus und zeigt wieder den Login-Screen an.
+
+Happy Coding!

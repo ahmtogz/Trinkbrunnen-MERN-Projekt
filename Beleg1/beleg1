@@ -1,0 +1,49 @@
+                                                     Beleg 1
+                                            Grundgerüst für das Frontend
+
+Ein neues Großprojekt zur Lokalisierung von nachhaltigen, umwelt-bezogenen Standorten in Berlin und Umgebung
+besteht aus mehreren, kleineren Projekten, welche sich der Visualisierung von Standorten jeweils einer speziellen
+nachhaltigen bzw. umwelt-bezogenen Kategorie widmen. Als Entwicklungsteam eines solchen Projektes dürfen Sie sich
+überlegen, welche Kategorie von „Nachhaltigkeits“-Standorten Sie recherchieren, dokumentieren und visualisieren
+wollen. Die Nachhaltigkeits-Standorte sollen in einer Webapplikation auf einer interaktiven Karte dargestellt werden.
+Die Webapplikation muss als eine Single Page Application (SPA) implementiert werden (genauere Beschreibung:
+https://moodle.htw-berlin.de/mod/resource/view.php?id=1314738).
+
+User Story: Als Product-Owner möchte ich unserem Management erst einmal Frontend-Prototypen, die nur HTML und
+CSS nutzen, vorstellen. Diese Frontend-Prototypen müssen folgende Acceptance Criteria erfüllen:
+
+1. Der Prototyp darf nur aus einer .html-Datei, der index.html, bestehen. CSS-Code kann sich in einer zusätzlichen
+Stylesheet-Datei befinden.
+
+2. Die index.html-Datei enthält die 4 vorgegebenen Screens: „Login“, „Main“, „Add“ und „Update/Delete“. Wenn
+die User-Person die URL file:///PATH_TO_DIR/index.html im Browser öffnet, werden diese vier Screens auf
+einer Seite unter einander angezeigt
+
+3. Der Login-Screen muss enthalten:
+• Name Ihrer Webapplikation
+• Eingabefeld für username (required)
+• Eingabefeld für password (required)
+• Button „Login“
+
+4. Der Main-Screen muss enthalten:
+• Willkommen-Nachricht
+• Interaktive Karte mit Markierung in Berlin
+• Links neben der Karte eine Liste von drei hart-kodierten Standortnamen
+• Button „Add“
+• Button „Logout“
+
+5. Der Add-Screen muss enthalten:
+• Eingabefelder für Standorte aus Ihrer Kategorie
+• Als User-Person muss ich einen Namen und eine Adresse eingeben, damit dieser Standort mit Name
+und Markierung auf einer Karte angezeigt werden kann
+• Button „Save/Submit“ und Button „Cancel“
+
+6. Der Update/Delete-Screen muss ein hart-kodierten Standort enthalten:
+• Eingabefelder sind mit hart-kodierten Werten belegt
+• Button „Update”, Button „Delete“ und Button „Cancel“
+
+7. Design der Webseite sollte ansprechend sein, HTML 5 und CSS müssen verwendet werden.
+
+Sprint Demo: Das Entwicklungsteam präsentiert den anderen Teams ihren Prototypen. Das Team erklärt in dieser
+Demo, u.a., welche Kategorie von Standorten untersucht worden ist, welche spezielle Eigenschaften bzgl.
+Nachhaltigkeit es gibt und warum man sich für diese Kategorie entschieden hat.

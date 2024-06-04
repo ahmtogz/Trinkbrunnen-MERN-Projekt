@@ -1,0 +1,38 @@
+<div class="all-elements">
+    <div id="updateDeleteID" class="updateDelete-container">
+        <h1>Update/Delete-Screen</h1>
+        <div class="updateDelete-form-container">
+            <form action="/update/{{posts._id}}?_method=PUT" method="post">
+                <div class="txt-field-container">
+                    <label>Name</label>
+                    <input type="text" name="titel" id="updateDeleteName" value="{{posts.titel}}"><br><br>
+
+                    <label>Straße</label>
+                    <input type="text" name="address" id="updateDeleteAddress" value="{{posts.address}}"><br><br>
+
+                    <label> Plz</label><br>
+                    <input type="number" name="postCode" id="updateDeletePostCode" value="{{posts.postCode}}"><br><br>
+
+                    <label>Stadt</label>
+                    <input type="text" name="city" id="updateDeleteCity" value="{{posts.city}}"><br><br>
+
+                    <div class="button-container">
+                        {{#if displayLink}}
+                            <button type="submit" class="action-button">Update</button>
+                        {{/if}}
+                    </div>
+
+                </div>
+            </form>
+        </div>
+
+        <div class="button-container">
+            {{#if displayLink}}
+                <form action="/delete/{{posts._id}}?_method=DELETE" method="post" class="inline-form">
+                    <button type="submit" class="action-button">Delete</button>
+                </form>
+            {{/if}}
+            <a href="/addCancel" class="action-button">Cancel</a>
+        </div>
+    </div>
+</div>

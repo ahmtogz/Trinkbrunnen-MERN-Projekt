@@ -1,0 +1,54 @@
+                                           WAD-Abschlussbeleg
+
+                                               React.js
+
+Das Hauptanliegen des Abschlussbelegs besteht darin, die SinglePage-Anwendung „susLocs in Berlin“ in eine
+Webanwendung mit M(E)RN-Stack umzuschreiben. D.h., Ihre Webanwendung muss folgende Technologien
+nutzen:
+
+MongoDB = M
+Express = E oder ein anderes Node-Framework
+  React = R
+   Node = N
+
+Aufgabe 1: Das Teammitglied, welches zum git-Repository eingeladen wurde, richtet sich in gitHub sein eigenes,
+privates WAD-Repository ein und übernimmt den letzten Stand des gemeinsamen Repos. Das Teammitglied,
+welches jetzt sein eigenes Repo hat, muss aus dem gemeinsamen Repo wieder ausgeladen werden, so dass jetzt
+alle Studierenden ihre eigenen, privaten WAD-Repos haben. Bitte mich, eschuler22, als Contributer/Collaborator
+zu Ihrem privaten WAD-Repo einladen!
+
+Aufgabe 2: Frontend refaktorisieren: React.js nutzen. Die Anforderungen aus Beleg 2/3 an die GUI und das
+Backend bleiben bestehen und müssen umgesetzt, d.h., nach dem Refactoring darf sich nichts an der
+Funktionalität Ihrer Webanwendung geändert haben, außer …
+
+Aufgabe 3: Eine neue Funktionalität in der UI muss implementiert werden: Intuitiv sollte die Nutzerperson auf
+dem Main-Screen (Screen mit Liste links und Karte mit Markierungen in der Mitte) erkennen, welche Markierung
+auf der Karte zu welchem Standort in der Liste gehört. Wie Sie diese Anforderung umsetzen, ist Ihnen überlassen.
+Möglichkeiten werden wir diskutieren.
+
+Hier die Acceptance Criteria:
+
+• MongoDB muss genutzt werden
+• Express oder ein anderes Node-basiertes Framework müssen genutzt werden
+• React im Frontend
+• Alle „alten“ Anforderungen und die neue Anforderung in Aufgabe 3 an die GUI sind umgesetzt
+
+Aufgabe 4: Präsentation des Abschlussbelegs in Zoom in einer 15-minütigen Sitzung mit Frau Prof. Schüler. Die
+Präsentation besteht aus zwei Teilen:
+
+1. Demo der Software:
+• App/Node-Server und ggfs. MongoDB starten
+• Die Webapp präsentieren, wie üblich verfahren (siehe Belegabgabe 3)
+• GitHub-Repo oder lokal das Projektverzeichnis öffnen: Express-Skripte und React-Code für Teil 2 parat
+halten
+
+2. Präsentation über React.js mit Code Review/Erklärung
+• Anliegen hier ist es, React.js einer/m Informatik- Kommiliton:in kurz & bündig anhand Ihres Codes zu
+erklären
+• Sollte eine Powerpoint-Präsi in Kombination mit Code Review sein
+• Muss die Frage „Was ist React?“ allgemein beantworten
+• Muss React anhand eines Beispiels aus Ihrem Code erklären
+• Kann Diagramme enthalten
+• Muss ein Quellenverzeichnis enthalten
+
+Beide Präsentation zusammen dürfen das Zeitlimit von 15 Minuten nicht überschreiten!
